@@ -13,19 +13,25 @@
   position: relative;
   height: 67px;
   background-color: $white;
+
+  @media screen and (min-width: $break-large) {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 
 .header-menu {
   position: absolute;
   flex: 1;
   top: 0;
-  left: 5px;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 5px;
   margin-top: 53px;
   padding: 20px;
+  padding-right: 0;
   width: 100%;
   background-color: $white;
   opacity: 0;
@@ -33,11 +39,11 @@
   @include keyframes(fade) {
     0% {
       opacity: 0;
-      left: 5px;
+      padding-right: 0;
     }
     100% {
       opacity: 1;
-      left: 0;
+      padding-right: 20px;
     }
   }
 

@@ -1,7 +1,20 @@
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/services';
+@import 'sections/contact';
+@import 'sections/footer';
+
 * {
   box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
 }
 
 body {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

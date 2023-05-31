@@ -1,1 +1,1 @@
-"use strict";console.log("ok");
+"use strict";var menu_button=document.querySelector(".header__mobile-menu-button"),menu=document.querySelector(".header-menu");menu_button.addEventListener("click",function(e){menu.classList.toggle("active")});

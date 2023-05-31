@@ -1,2 +1,87 @@
+@import 'colors';
+@import 'mixins';
+@import 'breakpoints';
+
 .header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 67px;
+  background-color: $white;
+
+  @media screen and (min-width: $break-large) {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+.header-menu {
+  position: absolute;
+  flex: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: 53px;
+  padding: 20px;
+  padding-right: 0;
+  width: 100%;
+  background-color: $white;
+  opacity: 0;
+  pointer-events: none;
+  @include keyframes(fade) {
+    0% {
+      opacity: 0;
+      padding-right: 0;
+    }
+    100% {
+      opacity: 1;
+      padding-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: $break-large) {
+    pointer-events: all;
+    position: relative;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    gap: 25px;
+    opacity: 1;
+  }
+}
+
+.header-menu.active {
+  @include animate(fade, 0.2s, forwards);
+  pointer-events: all;
+}
+
+.header-menu__link {
+  @media screen and (min-width: $break-large) {
+    font-size: 18px;
+  }
+}
+
+.header-menu__link.active {
+  font-weight: 700;
+  color: $primary;
+  border-bottom: 2px solid $secondary;
+}
+
+.header-menu__link:last-child {
+  color: $secondary;
+}
+
+.header__mobile-menu-button {
+  @media screen and (min-width: $break-large) {
+    display: none;
+  }
 }

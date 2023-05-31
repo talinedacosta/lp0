@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 
 function handleSass() {
     return gulp
-        .src('style/scss/*.scss')
+        .src('style/scss/**/*.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }))
@@ -41,7 +41,7 @@ function handleJavascript() {
 }
 
 function gulpWatch() {
-    gulp.watch('style/scss/*.scss', handleSass);
+    gulp.watch('style/scss/**/*.scss', handleSass);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('js/code/*.js', handleJavascript);
 }

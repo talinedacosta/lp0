@@ -1,0 +1,37 @@
+{
+  "name": "lp",
+  "version": "1.0.0",
+  "description": "Landing page para uma construtora",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/talinedacosta/lp0.git"
+  },
+  "keywords": [
+    "landing page"
+  ],
+  "author": "Taline da Costa @talinedacosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talinedacosta/lp0/issues"
+  },
+  "homepage": "https://github.com/talinedacosta/lp0#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.62.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

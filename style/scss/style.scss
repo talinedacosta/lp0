@@ -18,3 +18,37 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.button {
+  appearance: none;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  padding: 3px 10px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.button--primary-outline {
+  border-color: $primary;
+  background-color: $white;
+  color: $primary;
+}
+
+.button--white-outline {
+  border-color: $white;
+  background-color: transparent;
+  color: $white;
+}
+
+.button--primary {
+  border-color: $primary;
+  background-color: $primary;
+  color: $white;
+}
+
+.button--primary {
+  border-color: $secondary;
+  background-color: $secondary;
+  color: $white;
+}

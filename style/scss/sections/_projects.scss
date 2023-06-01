@@ -1,0 +1,63 @@
+@import 'breakpoints';
+@import 'colors';
+@import 'mixins';
+
+.projects {
+}
+
+.projects__title {
+  padding-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: $neutral-800;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  span {
+    font-size: 16px;
+    color: $secondary;
+  }
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 20px 50px;
+}
+
+.projects-cards__card {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  max-width: 355px;
+  @include shadow2;
+}
+
+.projects-cards__card__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $primary;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.projects-cards__card__image {
+  width: 100%;
+  object-fit: contain;
+}

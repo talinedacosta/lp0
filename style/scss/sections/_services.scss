@@ -1,2 +1,144 @@
+@import 'colors';
+@import 'mixins';
+
 .services {
+  background-color: $neutral-50;
+}
+
+.services__title {
+  padding-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  color: $neutral-800;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 20px 50px;
+}
+
+.services-cards__card {
+  width: 100%;
+  flex: 0 0 33.33%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 38px 50px;
+  gap: 15px;
+  @include shadow1;
+}
+
+.services-cards__card:nth-child(even) {
+  background-color: $primary;
+  color: $white;
+}
+
+.services-cards__card:nth-child(odd) {
+  background-color: $white;
+  color: $primary;
+}
+
+.services-cards__card__title {
+  margin: 0;
+}
+
+.services-cards__card__image {
+  padding-bottom: 20px;
+  border-bottom: 2px solid $neutral-100;
+}
+
+.services-experience {
+  width: 100%;
+  background-color: $white;
+  padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (min-width: $break-large) {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+.services-experience__image {
+  object-fit: contain;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+
+  @media screen and (min-width: $break-large) {
+    width: 70%;
+    margin: unset;
+  }
+}
+
+.services-experience-article {
+  width: 100%;
+  max-width: 500px;
+}
+
+.services-experience-article__title {
+  font-weight: 700;
+  font-size: 30px;
+  color: $primary;
+  margin-bottom: 0;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+.services-experience-article__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: $neutral-600;
+}
+
+.services-consultation {
+  width: 100%;
+  background-image: url('../../../assets/img/contact.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: $break-large) {
+    padding: 100px;
+  }
+}
+
+.services-consultation__title {
+  font-weight: 700;
+  font-size: 24px;
+  color: $white;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.services-consultation__text {
+  color: $white;
+  font-weight: 400;
 }
